@@ -1,0 +1,40 @@
+---
+title: "Ortodontia"
+author: "Samilly Miranda"
+format: html
+editor: visual
+---
+
+## Dados 
+
+[Informações técnicas](http://w3.datasus.gov.br/siasih/Arquivos/SIASUS_Informe_T%C3%A9cnico_2008-01.pdf)
+
+## Running Code
+
+```{r}
+library(microdatasus)
+
+dados <- fetch_datasus(year_start = 2008,month_start =1 , year_end = 2008,
+                       month_end = 2,
+                       uf = "BA", information_system ='SIA-PA',
+                       vars = c("PA_UFMUN",
+                                "PA_CODUNI",
+                                "PA_CMP",
+                                "PA_PROC_ID",
+                                "PA_NIVCPL" ,
+                                "PA_CBOCOD",
+                                "PA_GESTAO",
+                                "PA_CONDIC",
+                                "PA_TPFIN",
+                                "PA_SUBFIN",
+                                "PA_QTDPRO",
+                                "PA_QTDAPR"))
+                                
+# PA_UFMUN  Unidade da Federação + município do Estabelecimento
+
+# PA_CBOCOD Código de Ocupação Brasileira do Profissional de saúde executante
+# PA_NIVCPL Complexidade do Procedimento  
+# PA_CONDIC Sigla do Tipo de Gestão que o Estado ou Município está habilitado.
+#
+
+```
