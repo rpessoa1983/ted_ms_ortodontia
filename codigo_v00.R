@@ -158,6 +158,9 @@ dforto_anual <- dforto %>% group_by(ANO,
   summarise(PA_QTDPRO_SUM_ANUAL = sum(PA_QTDPRO),
             PA_QTDAPR_SUM_ANUAL = sum(PA_QTDAPR))
 
+dforto_anual %<>% rename_at('procedimentos',~'PROCEDIMENTOS')
+
+
 write.dta(dforto_anual,file = 'dforto_anual.dta')
 write.csv2(dforto_anual,file = 'dforto_anual.csv')
 save(dforto_anual,file = 'dforto_anual.RData')
