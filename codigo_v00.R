@@ -96,6 +96,7 @@ dforto <- dados %>%
          PA_NAT_JUR,NAT_JUR_DESCRICAO,
          PA_CONDIC,PA_CONDIC_ref)
 
+dforto %<>% mutate(PA_QTDAPR=as.numeric(PA_QTDAPR),PA_QTDPRO = as.numeric(PA_QTDPRO))
 ## LEIA-ME
 ### As conversões se basearam em dois documentos principais 
 ### CNES-DOMINIOS http://cnes.datasus.gov.br/pages/downloads/documentacao.jsp
@@ -118,7 +119,6 @@ dforto <- dados %>%
 
 ## Verificacao 
 
-dados %>% summarise(sum(as.numeric(PA_QTDAPR)))
 # Inclusao da variavel ano a partir da competencia
 dforto %<>% mutate(ANO = stri_sub(PA_CMP,1,4))
 
@@ -132,8 +132,36 @@ dfortoc<- dforto %>% group_by(ANO) %>%
 dftabnet <- read_csv("data/A221644189_28_143_208_ref_check.csv", 
                       col_types = cols(ano = col_character()))
 
-
+library(DT)
 verificacao <- inner_join(dfortoc,dftabnet,c("ANO"="ano"))
 names(verificacao) <- c(" ","Banco ISC","TAbNet") 
 datatable(verificacao)
+
+
+
+# Escrita em formato compativel com stata 
+
+library(foreign)
+
+
+
+dforto_anual <- dforto %>% group_by(ANO,
+                     UF,
+                     PA_UFMUN,
+                     NOME_MUN,           
+                     PA_PROC_ID,
+                     procedimentos,
+                     PA_NAT_JUR,
+                     NAT_JUR_DESCRICAO,
+                     PA_CONDIC,
+                     PA_CONDIC_ref) %>%
+  summarise(PA_QTDPRO_SUM_ANUAL = sum(PA_QTDPRO),
+            PA_QTDAPR_SUM_ANUAL = sum(PA_QTDAPR))
+
+write.dta(dforto_anual,file = 'dforto_anual.dta')
+write.csv2(dforto_anual,file = 'dforto_anual.csv')
+save(dforto_anual,file = 'dforto_anual.RData')
+write_parquet(dforto_anual,'dforto_anual.parquet')
+
+
 
