@@ -1,0 +1,22 @@
+ Produção Ambulatorial do SUS - Brasil - por local de atendimento
+Qtd.aprovada por Região e Ano atendimento
+Procedimento: 0701070099 PROTESE PARCIAL MANDIBULAR REMOVIVEL, 0701070102 PROTESE PARCIAL MAXILAR REMOVIVEL, 0701070110 PROTESE TEMPORARIA, 0701070129 PROTESE TOTAL MANDIBULAR, 0701070137 PROTESE TOTAL MAXILAR, 0701070145 PROTESES CORONARIAS / INTRA-RADICULARES FIXAS / ADESIVAS (POR ELEMENTO)
+Período:2008-2021
+"Região";"2008";"2009";"2010";"2011";"2012";"2013";"2014";"2015";"2016";"2017";"2018";"2019";"2020";"2021";"Total"
+"1 Região Norte";7771;5587;11568;15750;18823;19637;19538;21319;16901;18896;24441;37340;32499;33258;283328
+"2 Região Nordeste";41755;38359;48616;89904;124159;171179;251115;238054;255323;250399;303549;339433;208833;258853;2619531
+"3 Região Sudeste";52915;53299;69834;122977;165955;183855;215573;234051;245079;223543;232847;267035;145425;205804;2418192
+"4 Região Sul";37368;40154;43327;54142;65729;67160;87778;101096;108651;105917;114598;127159;78293;92203;1123575
+"5 Região Centro-Oeste";8419;9200;12542;19817;30000;28087;36715;38425;42583;39440;49111;57285;39509;49816;460949
+"Total";148228;146599;185887;302590;404666;469918;610719;632945;668537;638195;724546;828252;504559;639934;6905575
+ Fonte: Ministério da Saúde - Sistema de Informações Ambulatoriais do SUS (SIA/SUS)
+ Notas:
+ 
+ Dados referentes aos últimos seis meses, sujeitos a  atualização.
+ A partir do processamento de junho de 2012, houve mudança na classificação da natureza e esfera dos estabelecimentos. Com isso, temos que:
+      
+      Até maio de 2012 estas informações estão disponíveis como "Natureza" e "Esfera Administrativa".
+      De junho de 2012 a outubro de 2015, estão disponíveis tanto como "Natureza" e "Esfera Administrativa", como "Natureza Jurídica" e "Esfera Jurídica".
+      A partir de novembro de 2015, estão disponíveis como "Natureza Jurídica" e "Esfera Jurídica".
+      
+ 
