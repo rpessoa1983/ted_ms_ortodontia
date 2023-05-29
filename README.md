@@ -33,25 +33,30 @@ no servidor do DataSus em [CNES-DOMINIOS](http://cnes.datasus.gov.br/pages/downl
 Quanto à variável **PA_PROC_ID** deu origem a variável **PROCEDIMENTOS** utilizando a descrição disponível 
 no TabNet. 
 
-g. Por fim, os dados foram agrupados por **ANO**, **PA_UFMUN**,**PA_CODUNI**,**PA_PROC_ID**,
+g. Os dados foram agrupados por **ANO**, **PA_UFMUN**,**PA_CODUNI**,**PA_PROC_ID**,
 **PA_CBOCOD**,**PA_CONDIC**, **PA_NAT_JUR** e **PROCEDIMENTOS** e as variáveis 
 correpondentes as quantidades *produzidas* e *aprovadas* (**PA_QTDPRO**, **PA_QTDAPR**) 
 de cada um desses procedimentos foi somada de acordo com tais categorias, dando origem às
 seguintes variáveis  **PA_QTDPRO_SUM_ANUAL** e **PA_QTDAPR_SUM_ANUAL**. 
 
-h. Os dados foram registrados em 4 formatos diferentes com os seguintes nomes:
+h. O arquivo de verificação dos totais anuais de procedimentos realizados foi obtido do Tabnet (A221644189_28_143_208.csv)
+e foram utilizados para comparar com dos dados somados de todos os anos independente de outras categorias para  as 
+**PA_QTDPRO_SUM_ANUAL** e **PA_QTDAPR_SUM_ANUAL**. 
+
+h. Por fim, os dados foram registrados em 4 formatos diferentes com os seguintes nomes:
 
 - dforto_anual.dta
 - dforto_anual.RData
 - dforto_anual.parquet
 - dforto_anual.csv
 
+
 ## Fontes de categorias das variáveis 
 As conversões se basearam em dois documentos principais: 
 
-[CNES-DOMINIOS](http://cnes.datasus.gov.br/pages/downloads/documentacao.jsp)
-
-[Manual do SIASUS](ftp://arpoador.datasus.gov.br/siasus/documentos/Manual_Operacional_SIA_V_1_1.pdf)
+- [CNES-DOMINIOS](http://cnes.datasus.gov.br/pages/downloads/documentacao.jsp)
+- DISSEMINAÇÃO DE DADOS EM SAÚDE SISTEMA DE INFORMAÇÕES AMBULATORIAIS DO SUS - SIASUS (Contém dicionário de dados.)
+- [Manual do SIASUS](ftp://arpoador.datasus.gov.br/siasus/documentos/Manual_Operacional_SIA_V_1_1.pdf)
 
 ## Dicionário de dados 
 
